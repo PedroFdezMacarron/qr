@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de QR</title>
+    <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script>
+</head>
+<body>
+    <h1></h1>
+    <!-- <div>
+        <label for="text">Texto:</label>
+        <input type="text" id="text" placeholder="Ingrese el texto">
+        <button onclick="generateQR()">Generar QR</button>
+    </div> -->
+    <div id="qrcode"></div>
+
+    <script>
+        // Comprobar si hay un parámetro de texto en la URL y generarlo automáticamente
+        const urlParams = new URLSearchParams(window.location.search);
+        const textParam = urlParams.get('text');
+        if (textParam) {            
+            const text = textParam;
+            const qrcode = new QRCode(document.getElementById("qrcode"), {
+                text: text,
+                width: 200,
+                height: 200
+            });
+        }
+    </script>
+</body>
+</html>
+
