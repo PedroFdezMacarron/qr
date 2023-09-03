@@ -6,6 +6,12 @@
     <title>Generador de QR</title>
     <!-- <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs/qrcode.min.js"></script> -->
     <script src="./qrcode.min.js"></script>
+    <style>
+       body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          
+        }
+    </style>
 </head>
 <body>
     <h1></h1>
@@ -28,7 +34,7 @@
                 height: 200
             });            
         } else {
-            document.getElementById("qrcode").textContent = "par generar un QR debes añadir a la url ?text=el_texto_que_quiueres"
+            document.getElementById("qrcode").textContent = "Para generar un QR debes añadir esto a la url    ?text=el_texto_que_quieres_generar"
         }
     </script>
 </body>
